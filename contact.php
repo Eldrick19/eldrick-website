@@ -19,8 +19,8 @@ if (!$comment) $errors[count($errors)] = 'Please enter your message.';
 //if the errors array is empty, send the mail
 if (!$errors) {
 
-	//recipient - replace your email here
-	$to = 'wowthemesnet@gmail.com';	
+	//recipient 
+	$to = 'eldrick.wega@gmail.com';	
 	//sender - from the form
 	$from = $name . ' <' . $email . '>';
 	
