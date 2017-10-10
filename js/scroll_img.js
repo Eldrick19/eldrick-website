@@ -16,9 +16,9 @@ $(document).ready(function(){
         $("head").append("<style> #img-next {opacity: 1;} </style>");
     });
 
-   	var nextImage = function nextImage() {
+   	function nextImage() {
 	   	$('#gallery').fadeTo('slow', 0, function(){
-	   	$(this).css('background-image', 'radial-gradient(circle at 15% 15%,rgba(0,0,0,0.20),rgba(0,0,0,0.20)),url('+theImages[i] + ')');
+      $(this).css('background-image', 'radial-gradient(circle at 15% 15%,rgba(0,0,0,0.20),rgba(0,0,0,0.20)),url(' + theImages[i] + ')');
 	   	}).delay(500).fadeTo('slow', 1);
 	   	i = i + 1;    		
 	   	if (i == theImages.length) {
@@ -30,6 +30,7 @@ $(document).ready(function(){
 		clearInterval(timer);
 		timer = setInterval(nextImage, 8000);
 	}
+
 
   	$('#img-next').click(function(){
   		nextImage();
@@ -50,8 +51,8 @@ $(document).ready(function(){
     	$('#gallery').fadeTo('slow', 0, function(){
 			$(this).css('background-image', 'radial-gradient(circle at 15% 15%,rgba(0,0,0,0.20),rgba(0,0,0,0.20)),url(' + theImages[i] + ')');
 		}).delay(500).fadeTo('slow', 1);
-    	i = i - 1;
-    	if (i == -1) {
+    i = i - 1;
+    if (i == -1) {
 			i = theImages.length - 1;
 		}
     }
