@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Images for Gallery, Initialization -->
-<script type="text/javascript", src="js/img_array.js"></script>
 <!-- JQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- Image Scrolling Script -->
-<script type="text/javascript", src="js/scroll_img.js"></script>
+<!-- Images for Gallery, Initialization -->
+<script type="text/javascript", src="js/arrays.js"></script>
+<!-- Output Images to HTML-->
+<script type="text/javascript", src="js/img_output.js"></script>
+<!-- Setting up Countries Script-->
+<script type="text/javascript", src="js/countries_output.js"></script>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +15,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <title>Eldrick Wega</title>
-<link rel="icon" href="xi.png">
+<link rel="icon" href="./img/xi.png">
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
@@ -28,7 +30,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <!-- Navigation -->
@@ -78,83 +79,91 @@
 </div>
 </header>
 <!-- About Section -->
-<section id="about">
-<div class="container content-section text-center">
-	<div class="row">
+<section id="about" class="content-section">
+	<a href="#map" class="btn btn-section btn-black btn-circle page-scroll">
+		<i class="fa fa-angle-double-down animated"></i>
+	</a>
+	<div id="about-text" class="text-center vert-horiz-center">
 		<h2>ABOUT ME</h2>
-		<div class="col-lg-8 col-lg-offset-2">
-			<p>
-				Canadian student of Cameroonian / Malian origin, raised in several different parts of the world. 3rd Year at the <a href="https://uwaterloo.ca/" target="_blank" style="border-bottom:1px dashed #444444; font-weight: bold;"> University of Waterloo </a> in Management Engineering. 
-			</p>
-			<a href="https://uwaterloo.ca/future-students/programs/management-engineering" target="_blank" class="btnghost">What is Management Engineering? </a>
-			</br>
-			</br>
-			</br>
-			<p> Adept learner of Optimization, Management, and Engineering practices. There can always be more efficient. </p>
-		</div>
+		<p>Canadian of Cameroonian / Malian origin, raised in different parts of the world. 2020 graduate from <a href="https://uwaterloo.ca/" target="_blank" style="border-bottom:1px dashed #444444; font-weight: bold;"> University of Waterloo </a> in Management Engineering.</p>
+		<a href="https://uwaterloo.ca/future-students/programs/management-engineering" target="_blank" class="btnghost">What is Management Engineering? </a>
+		<br>
+		<br>
+		<br>
+		<p>I have a passion to build products with amazing people. Extremely interested in how technology can and will play a role in African development. <br> End Goal? Start a business in West Africa.</p>
 	</div>
-</div>
 </section>
+<!--Map Section-->
+<section id="map">
+	<a href="#photos" class="btn btn-section btn-circle page-scroll">
+		<i class="fa fa-angle-double-down animated"></i>
+	</a>
+	<div id="countries-container">
+		<h2 class="country-text">Cities Lived</h2>
+		<p class="country-text" style="margin-top:-30px; font-size:90%;">(Because people ask me all the time)</p>
+		<ul id="country-list">
+			<li id="c1" class="countries">Montreal <i class="fa fa-angle-right"></i></li>
+			<li id="c2" class="countries">Ottawa <i class="fa fa-angle-right"></i></li>
+			<li id="c3" class="countries">Bruxelles <i class="fa fa-angle-right"></i></li>
+			<li id="c4" class="countries">London <i class="fa fa-angle-right"></i></li>
+			<li id="c5" class="countries">Lagos <i class="fa fa-angle-right"></i></li>
+			<li id="c6" class="countries">Yaoundé <i class="fa fa-angle-right"></i></li>
+			<li id="c7" class="countries">Douala <i class="fa fa-angle-right"></i></li>
+			<li id="c8" class="countries">Toronto <i class="fa fa-angle-right"></i></li>
+			<li id="c9" class="countries">Dakar <i class="fa fa-angle-right"></i></li>
+			<li id="c10" class="countries">Abidjan <i class="fa fa-angle-right"></i></li>
+			<li id="c11" class="countries">San Francisco <i class="fa fa-angle-right"></i></li>
+			<li id="c12" class="countries">Hong Kong</li>
+		</ul>
+	</div>
+	</section>
 <!-- Photo Gallery Section -->
-<section id="portfolio">
-<div id="gallery">
-    <a id="img-prev" class="btn btn-rect">
-		<i class="fa fa-3x fa-angle-left animated"></i>
-	</a>
-	<h2 id= "gallery-text">I enjoy travelling and these pictures are from a few of my latest trips.</h2>
-	<a id= "gallery-btn" class="btn btn-circle" onclick="resetTimer()">
-		<i class="fa"> <h3> Start Slideshow </h3> </i>
-	</a>		
-    <a id="img-next" class="btn btn-rect">
-		<i class="fa fa-3x fa-angle-right animated"></i>
-	</a>
-	<p id ="gallery-updated-date"> *Last updated on 09/22/17 </p>
-</div>
+<section id="photos" class="">
+	<div id="slideshow-container"class ="vert-center">
+		<script>outputImages();</script>
+		<a class="prev vert-center" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next vert-center" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+	<div id="text-container" class="content text-center vert-center" style="padding-left:5%;padding-right:5%;">
+		<h2>Some Pictures</h2>
+		<p>Fortunate to have travelled a little, and thought it would be cool to share some pictures.
+			<br>
+			<br>
+			Try to guess which is where!
+		</p>
+	</div>
 </section>
 <!-- Contact Section -->
 <section id="contact">
-<div class="container content-section text-center">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2">
-			<h2>Contact Me</h2>
-			<p>
-			If you would like to contact me for any reason please feel free to use my email below.
-			</p>
-			<p>
-				<i>
-					<a href="mailto:eldrick.wega@gmail.com" style="border-bottom:1px dashed #ccc;">eldrick.wega@gmail.com</a>
-				</i>
-			</p>
-			<ul class="list-inline banner-social-buttons">
-				<li>
-				<a href="https://www.linkedin.com/in/eldrick-wega-66981b111/" target="_blank" class="btn btnghost btn-lg"><i class="fa fa-linkedin fa-fw"></i><span class="network-name">LinkedIn</span></a>
-				</li>
-				<!--
-				<li>
-				<a href="https://www.facebook.com/pages/wowthemesnet/562560840468823" class="btn btnghost btn-lg"><i class="fa fa-facebook fa-fw"></i><span class="network-name">Facebook</span></a>
-				</li>
-				<li>f
-				<a href="https://plus.google.com/u/0/b/110916582192388695332/110916582192388695332/posts" class="btn btnghost btn-lg"><i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google+</span></a>
-				</li>
-				-->
-			</ul>
-		</div>
+	<div id= "contact-text" class="text-center horiz-center" style="top: 20px;">
+		<h2>Contact Information</h2>
+		<p>Feel free reach out: chat, oppportunities, anything!</p>
+		<ul class="list-inline banner-social-buttons">
+			<li style ="display: inline-block; margin-left:5px;margin-right:5px;">
+				<a href="https://www.linkedin.com/in/eldrick-wega" target="_blank" class="btn btnghost btn-lg"><i class="fa fa-linkedin fa-fw"></i><span class="network-name">LinkedIn</span></a>
+			</li>
+			<li style ="display: inline-block;margin-left:5px;margin-right:5px;">
+				<a href="mailto:eldrick.wega@gmail.com" target="_blank" class="btn btnghost btn-lg"><i class="fa fa-envelope fa-fw"></i><span class="network-name">Email</span></a>
+			</li>
+		</ul>
 	</div>
-</div>
+	
 </section>
 <!-- Footer -->
 <footer>
 <div class="container text-center">
 	<p class="credits">
-		Copyright &copy; Eldrick Wega 2017<br/>
+		Copyright &copy; Eldrick Wega 2019<br/>
 	</p>
 </div>
 </footer>
+<!--Images JS
+<script src="js/slideshow.js"></script>-->
 <!-- Project Page not ready Modal -->
 <div id="myModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <img id="wip-img" src="img/logo/wip.png">
+    <img id="wip-img" src="./img/logo/wip.png">
     <p style="color: #333;">My Project page is still under construction. Please check back at a later time.</p>
   </div>
 </div>
