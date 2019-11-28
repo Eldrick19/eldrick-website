@@ -25,9 +25,16 @@ p {
 	line-height:1.5;
 }
 
-p.job-description {
+p.job-title {
 	margin:0 0 25px;
 	font-size:14px;
+	line-height:1.3;
+	font-weight: bold;
+}
+
+p.job-description {
+	margin:0 0 25px;
+	font-size:12px;
 	line-height:1.3;
 }
 
@@ -267,19 +274,24 @@ a:hover,a:focus {
 	}
 }
 .content-section {
-	padding:40px 0;
+	padding-top:40px;
+	padding-bottom:40px;
+	padding-right:2.5%;
+	padding-left:2.5%;
 	clear:both;
 
 }
 
 @media(min-width:767px) {
 	.content-section {
-		padding:70px 0;
+		padding-top:70px;
+		padding-bottom:40px;
 			 clear:both;
 	}
 
 	.content-section-about {
-		padding:70px 0;
+		padding-top:70px;
+		padding-bottom:40px;
 			 clear:both;
 	}
 }
@@ -669,10 +681,6 @@ img {
 		height: 100%;
 	}
 
-	#map{
-		
-	}
-
 	.btn-section{
 		visibility: hidden;
 	}
@@ -718,6 +726,10 @@ section {
 	transition:border linear 0.2s,box-shadow linear 0.2s;	
 }
 
+#resume-section{
+	position: relative;
+}
+
 #resume-fn{
 	margin: auto;
 	margin-top: 20px;
@@ -726,9 +738,39 @@ section {
 }
 
 #pdf {
-	margin-left: 0px;
-	margin-right: -60px;
 	padding: 0px;
+	width: 60%;
+	position: relative;
+}
+
+#resume-container{
+	position: relative;
+	display: flex;
+}
+
+#resume-text{
+	width: 40%;
+	padding-top:0;
+}
+
+@media screen and (max-width: 768px) {
+	#resume-container{
+		display: block;
+		position: relative;
+		padding-top: 40px;
+		padding-bottom: 0px;
+	}
+
+	#pdf{
+		width: 100%;
+		height: 600px;
+	}
+
+	#resume-text{
+		width: 100%;
+		position: initial;
+		padding-top: 40px;
+	}
 }
 
 #contactform input,#contactform textarea {
