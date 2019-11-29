@@ -78,15 +78,23 @@
 			Your message has been sent. Thank you!
 		</div>
 	</div>
-	<form action="https://formspree.io/mnqnpnej" method="POST" id="contactform">
-		<input type="text" name="name" placeholder="Your Name *">
-		<br>
-		<input type="text" name="_replyto" placeholder="Your E-mail Address *">
-		<br>
-		<textarea name="message" rows="7" placeholder="Type your Message *"></textarea>
-		<br>
-		<button type="submit" id="submit" class="clearfix btn">Send</button>
-	</form>
+	<form
+	action="https://formspree.io/mnqnpnej"
+	method="POST"
+  >
+	<label>
+	  Your email:
+	  <input type="text" name="_replyto">
+	</label>
+	<label>
+	  Your message:
+	  <textarea name="message"></textarea>
+	</label>
+  
+	<!-- your other form fields go here -->
+  
+	<button type="submit">Send</button>
+  </form>
 </div>
 </section>
 <!-- Footer -->
