@@ -681,6 +681,10 @@ img {
 		height: 100%;
 	}
 
+	.form-element{
+		width: 100%;
+	}
+
 	.network-name{
 		display: none;
 		text-align: center;
@@ -795,13 +799,13 @@ section {
 	letter-spacing:2px;
 	margin-bottom:20px;
 }
-#contactform input#submit {
+#contactform button#submit {
 	width:auto;
 	border:2px solid;
 	padding:10px 20px;
 	display:inline-block;
 }
-#contactform input#submit:hover {
+#contactform button#submit:hover {
 	background-color:#333;
 	color:#fff;
 	border:2px solid #333;
