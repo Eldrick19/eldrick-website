@@ -61,7 +61,7 @@
 				<p class="intro-text">
 					The contact form is live! Start a conversation with me.
 				</p>
-				<a href="#contact" class="btn btn-circle page-scroll">
+				<a href="#contact-2" class="btn btn-circle page-scroll">
 				<i class="fa fa-angle-double-down animated"></i>
 				</a>
 			</div>
@@ -79,18 +79,17 @@
 		</div>
 	</div>
 	<form id="contactform" action="https://formspree.io/mnqnpnej" method="POST">
-	<label>
-	  Your E-Mail:
-	  <input type="text" name="_replyto">
-	</label>
-	<br>
-	<label>
-	  Your Message:
-	  <textarea name="message"></textarea>
-	</label>
-	<br>
-	<!-- your other form fields go here -->
-	<button id="submit" class="clearfix btn" type="submit">Send</button>
+		<b>Name:</b>
+		<input type="text" name="_name" required>
+		<br>
+		<b>E-Mail:</b>
+		<input type="text" name="_replyto" required>
+		<br>
+		<b>Message:</b>
+		<textarea name="message" rows="7" required></textarea>
+		<br>
+		<!-- your other form fields go here -->
+		<button class="clearfix btn" type="submit">Send</button>
   </form>
 </div>
 </section>
