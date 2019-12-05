@@ -410,9 +410,6 @@ img {
 	max-width:100%;
 }
 
-/* ^^^ Everything above is from the theme */
-/* Input by Eldrick from here below */
-
 /*SOME GENERAL STUFF*/
 
 .btn-section{
@@ -735,6 +732,147 @@ section {
 	-moz-transition:border linear 0.2s,box-shadow linear 0.2s;
 	-o-transition:border linear 0.2s,box-shadow linear 0.2s;
 	transition:border linear 0.2s,box-shadow linear 0.2s;	
+}
+
+.projects-category{
+	position: relative;
+}
+
+.project{	
+	display: inline-block;
+	position: relative;
+	background-color: rgb(129, 140, 150, 0.05);
+	height: 200px;
+	width: 350px;
+	margin: 0% 1% 2% 1%;
+
+	border-right-style: solid;
+	border-right-width: 5px;
+	border-color: rgb(129, 140, 150, 0.05);
+
+	-webkit-transition: background-color 1s; /* For Safari 3.1 to 6.0 */
+	transition: background-color 1s;
+}
+
+.project img{
+	display: inline-block;
+	height: 100%;
+	width: 50%;
+	object-position: left;
+	object-fit: cover;
+	
+	-webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+  	transition: width 1s;
+}
+
+.project span{
+	display: inline-block;
+	width: 50%;
+	padding-left: 5px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-color: lightseagreen;
+}
+
+#project-title{
+	height: 63%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	
+	-webkit-transition: width 1s, height 1s, color 0.5s, border-color 0.5s; /* For Safari 3.1 to 6.0 */
+	transition: width 1s, height 1s, color 0.5s, border-color 0.5s;
+}
+
+.project h5{
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+#project-desc {
+	height: 30%;
+	width: 0px;
+	right: 0;
+	padding-left: 5px;
+	border-color: transparent;
+	
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+	margin-left: 5px;
+}
+
+#project-desc p{
+	font-size: 12px;
+}
+
+#project-desc b{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	background-color: lightseagreen;
+}
+
+.project div{
+	bottom: 0;
+	right: 0;
+	border: none;
+	background: none;
+	position: absolute;
+	width: 50%;
+	height: 37%;
+	padding-left: 5px;
+	font-size: 16px;
+	font-weight: 600;
+	font-size: 19px;
+	color: lightseagreen;
+
+	-webkit-transition: width 1s, height 1s; /* For Safari 3.1 to 6.0 */
+  	transition: width 1s, height 1s;
+}
+
+.project:hover{
+	cursor: pointer;
+	background-color: rgb(32, 178, 170);
+	color: white;
+
+}
+
+.project:hover #project-title{
+	border-color: white;
+	width: 75%;
+	height: 33%;
+
+}
+
+
+
+.project:hover #project-desc{
+	border-color: white;
+	visibility: visible;
+	width: 75%;
+
+	-webkit-transition: width 0.5s, border-color 0.5s; /* For Safari 3.1 to 6.0 */
+	transition: width 0.5s, border-color 0.5s;
+	-webkit-transition-delay: 0.5s; /* Safari */
+	transition-delay: 0.5s;
+}
+
+.project:hover div{
+	width: 75%;
+	height: 33%;
+
+}
+
+.project:hover h4{
+	color: white;
+
+}
+
+.project:hover img{
+	width: 25%;
+	
 }
 
 #resume-section{
