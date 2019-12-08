@@ -19,7 +19,7 @@ var projects = [
         id: "gw",
         title: "Gregarious Wolf - E-Sports Highlights Generator",
         desc: "CURRENTLY WIP - Working on this tool for our 4th Year Design Project. The tool ingests a long format game of the video game CS:GO and outputs automatically generated highlights. Working on this project with Tyler Lam, Kevin Lee, Matthieu Court.",
-        img: "GW.jpg",
+        img: "GW.JPG",
         link: [["Document","https://docs.google.com/document/d/1t09mTBuW8WOmWeKwMba5nDKCEU7CHjc8OJ5SFDx4M84/edit?usp=sharing"]],
         category: "Class"
     },
@@ -27,7 +27,7 @@ var projects = [
         id: "cpt",
         title: "Congenial Palm Tree - Location Optimizer",
         desc: "A tool made for our 'Decision Support Tools' course. The tool optimizes the location of your business in Toronto based on 2 factors: proximity to pedestrians and distance from competition. Worked on this with main partner Matthieu Court - a roommate, co-student, and friend.",
-        img: "CPT.jpg",
+        img: "CPT.JPG",
         link: [["Code Repository","https://github.com/Eldrick19/congenial-palm-tree"],["Document","https://docs.google.com/document/d/1bIPt1dUQmXn6_fGGOgplSoWZV5xnbmos1wJnwjQ5iJU/edit?usp=sharing"]],
         category: "Class"
     },
@@ -35,7 +35,7 @@ var projects = [
         id: "dl",
         title: "Didactic Lamp - Fake News Trends",
         desc: "A collection of scripts created for our 'Data Warehousing & Mining' course. The scripts use large datasets to find trends in 'Fake News' from various articles, using both the Apriori and PRIMS data science algorithms. Worked on this with main partner Matthieu Court - a roommate, co-student, and friend.",
-        img: "DL.jpg",
+        img: "DL.JPG",
         link: [["Code Repository","https://github.com/Eldrick19/didactic-lamp"],["Document","https://docs.google.com/document/d/1Sd8Upyh-lpNOEFvd7YlN4OIT2pmDG2R92DIQjPgpo8g/edit?usp=sharing"]],
         category: "Class"
     },
@@ -43,7 +43,7 @@ var projects = [
         id: "ar",
         title: "Amiable Riptide - Trucking Optimization",
         desc: "An optimization model created for our 'Supply Chain Management' course. Our group created a model meant to optimize the allocation of city bikes at each station in Toronto, with the trucks moving these bikes around taken into consideration. Worked on this project with Tyler Lam, Kevin Lee, Matthieu Court.",
-        img: "AR.jpg",
+        img: "AR.JPG",
         link: [["Code Repository","https://github.com/mattlianje/amiable-riptide"]],
         category: "Class"
     },
@@ -51,7 +51,7 @@ var projects = [
         id: "2elevator",
         title: "Simulation Analysis of Two Elevator System",
         desc: "A project worked on for our 'Simulation Analysis & Design' course. It involved analyzing current behavior in a known elevator (taken from school campus), and using this to simulate an elevator system. Software used was ARENA.",
-        img: "2ELEV.jpg",
+        img: "2ELEV.JPG",
         link: [["Document","https://docs.google.com/document/d/1rAcooYpTayvQ7tpAYno1FqKmkXE0lnaoq1qXRTG4Z5A/edit?usp=sharing"]],
         category: "Class"
     },
@@ -59,7 +59,7 @@ var projects = [
         id: "predmgmt",
         title: "Prediction Management User Interface",
         desc: "This Prediction Management UI is part of Credit Karma. It is intended to be used internally by the Data Science team to streamline creation/management/deployment of data models. Worked on creating a detailed roadmap and user stories for future use by engineers for the UI.",
-        img: "PMGMT.jpg",
+        img: "PMGMT.JPG",
         link: [["Document (PDF)","./pdf/Prediction_Management_ Roadmap.pdf"]],
         category: "Work"
     },
