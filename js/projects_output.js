@@ -64,7 +64,9 @@ function OutputProjects(projects){
 $(document).ready(function() {
     for (let i=0; i<projects.length; i+=1) {
         $("#" + projects[i].id).click(function() {
-            window.open("./project-details.php?id=" + projects[i].id, "_self");
+            sessionStorage.setItem("id", projects[i].id);
+            console.log(sessionStorage.getItem('id'));
+            window.open("./project-details.html", "_self");
         });
     }
     $("#back-button").click(function() {
@@ -76,14 +78,12 @@ $(document).ready(function() {
 //Used on project-details.php page. Searches for all project information based on ID and outputs it to page.
 function detailsOutput(id){
     var project = search(id, projects);
-    console.log(project.title);
     
     document.getElementById("title-output").innerHTML = project.title;
     document.getElementById("desc-output").innerHTML = project.desc;
     document.getElementById("img-output").src = "./img/project/" + project.img;
 
     var linkOutput = '';
-    console.log(project.link[0][0]);
     for (var i=0; i < project.link.length; i++){
         linkOutput += '<a href="' + project.link[i][1] + '" target="_blank">' + project.link[i][0] +'</a><br><br>';
     }
