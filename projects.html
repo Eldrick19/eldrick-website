@@ -7,7 +7,9 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <title>Eldrick Wega</title>
-<link rel="icon" type="image/png" sizes="16x16" href="img/logo/xi.png">
+<link rel="icon" href="./img/xi.png">
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
@@ -39,7 +41,7 @@
 	<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 		<ul class="nav navbar-nav">
 			<li>
-			<a href="portfolio-item.html">Project[s]</a>
+			<a href="projects.html">Projects</a>
 			</li>
 			<li>
 			<a href="view-resume.html">View Resume</a>
@@ -54,16 +56,16 @@
 <!-- /.container -->
 </nav>
 <!-- Intro Header -->
-<header class="intro">
+<header class="intro intro-2nd">
 <div class="intro-body">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<h1 class="brand-heading">Project Name</h1>
+				<h1 class="brand-heading">My Projects</h1>
 				<p class="intro-text">
-					Buildings, Parks, Gardens
+					Projects page is live! Highlights things I've worked on.
 				</p>
-				<a href="#single-project" class="btn btn-circle page-scroll">
+				<a href="#projects-section" class="btn btn-circle page-scroll">
 				<i class="fa fa-angle-double-down animated"></i>
 				</a>
 			</div>
@@ -72,33 +74,31 @@
 </div>
 </header>
 <!-- Project Details Section -->
-<section id="single-project">
-<div class="container content-section text-center">
-	<div class="row">
-		<h2>STEPS OF PROJECT</h2>
-		<div class="col-lg-8 col-lg-offset-2">
-			<p>
-				Describe project here, add some images etc. Praesent ac dignissim diam. Aliquam lobortis elit et sapien eleifend, at sollicitudin metus elementum. Morbi imperdiet id ipsum at tristique. Nam suscipit tristique sem, <a href="#">quis</a> laoreem.
-			</p>
-			<p>
-				<a href="#" class="btnghost"><i class="fa fa-envelope"></i> Request similar project</a> 
-				<i style="font-size:12px;margin-right:3px;"> or </i> 
-				<a href="index.html#portfolio" class="btnghost"><i class="fa fa-camera"></i> Back to projects gallery</a>
-			</p>
+<section id="projects-section">
+	<div id="projects-container" class="content-section">
+		<div id="projects-work" class="projects-category content-section">
+			<h3>From Work</h3>
+		</div>
+		<div id="projects-class" class="projects-category content-section">
+			<h3>From Classes</h3>
+		</div>
+		<div id="projects-personal" class="projects-category content-section">
+			<h3>From My Own Projects</h3>
 		</div>
 	</div>
-</div>
 </section>
 <!-- Footer -->
 <footer>
 <div class="container text-center">
 	<p class="credits">
-		Copyright &copy; Eldrick Wega 2017
+		Copyright &copy; Eldrick Wega 2019
 	</p>
 </div>
 </footer>
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
+<!-- Projects Setup -->
+<script type="text/javascript", src="js/projects_array.js"></script>
+<script type="text/javascript", src="js/projects_output.js"></script>
+<script>OutputProjects(projects);</script>
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <!-- Plugin JavaScript -->

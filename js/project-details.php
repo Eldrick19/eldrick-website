@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
 <title>Eldrick Wega</title>
 <link rel="icon" href="./img/xi.png">
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<!-- Projects Setup -->
+<script type="text/javascript", src="js/projects_output.js"></script>
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
@@ -31,7 +36,8 @@
 		<i class="fa fa-bars"></i>
 		</button>
 		<a class="navbar-brand page-scroll" href="index.html">
-		HOMEPAGE </a>
+		HOMEPAGE
+		</a>
 	</div>
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
@@ -51,64 +57,22 @@
 </div>
 <!-- /.container -->
 </nav>
-<!-- Intro Header -->
-<header class="intro intro-2nd">
-<div class="intro-body">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<h1 class="brand-heading">Get in Touch</h1>
-				<p class="intro-text">
-					The contact form is live! Start a conversation with me.
-				</p>
-				<a href="#contact-2" class="btn btn-circle page-scroll">
-				<i class="fa fa-angle-double-down animated"></i>
-				</a>
-			</div>
-		</div>
-	</div>
-</div>
-</header>
-<!-- Contact Section -->
-<section id="contact-2">
-<div id="contact-send" class="container content-section">
-	<div class="done">
-		<div class="alert alert-success">
-			<button type="button" class="close" data-dismiss="alert">×</button>
-			Your message has been sent. Thank you!
-		</div>
-	</div>
-	<form id="contactform" action="https://formspree.io/mnqnpnej" method="POST">
-		<b>Name:</b>
-		<input type="text" name="_name" required>
-		<br>
-		<b>E-Mail:</b>
-		<input type="text" name="_replyto" required>
-		<br>
-		<b>Message:</b>
-		<textarea name="message" rows="7" required></textarea>
-		<br>
-		<!-- your other form fields go here -->
-		<button class="clearfix btn" type="submit">Send</button>
-  </form>
-</div>
+<!-- Project Details Section -->
+<section id="projects-details">
+	This is a test
 </section>
 <!-- Footer -->
 <footer>
 <div class="container text-center">
 	<p class="credits">
-		Copyright &copy; Eldrick Wega 2019
+		Copyright &copy; Eldrick Wega 2017
 	</p>
 </div>
 </footer>
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <!-- Plugin JavaScript -->
 <script src="js/jquery.easing.min.js"></script>
-<!-- Contact JavaScript -->
-<script src="js/validate.js"></script>
 <!-- Custom Theme JavaScript -->
 <script src="js/theme.js"></script>
 </body>
