@@ -954,6 +954,10 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+	.project {
+		margin-bottom: 40px;
+	}
+	
 	.intro-3rd {
 		height:40px!important;
 		background-color: transparent;
@@ -967,7 +971,7 @@ section {
 	#project-details span{
 		display: block;
 		padding-top: 20px;
-		max-width: 50%;
+		max-width: 100%;
 	}
 	
 	#img-output {
