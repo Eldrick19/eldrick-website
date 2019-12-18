@@ -1,4 +1,25 @@
-  
+function outputCountries() {
+  // Loop to output all countries
+  var i;
+  for(i = 0; i < countryArray.length; i++){
+    // Create singular country
+    var country = document.createElement('li');
+    var arrow = document.createElement('i');
+    country.id = 'c' + (i+1);
+    country.className = 'countries';
+    arrow.className = 'fa fa-angle-right';
+
+    country.appendChild(document.createTextNode(countryArray[i]  + ' '));
+    if (i<countryArray.length-1){
+      country.appendChild(arrow);
+    }
+    
+    //Append it to country list
+    var node = document.getElementById('country-list');
+    node.appendChild(country);
+  }
+}
+
   $(document).ready(function() {
     var countriesShown = false;
     var triggerCountries = '#countries-container';
@@ -10,7 +31,7 @@
     if(bottomOfWindow > bottomOfCountries && countriesShown == false){
       $('.country-text').delay(700).animate({'opacity':'1'},2000);
       var cNb = 1;
-      var cTotal = 12;
+      var cTotal = countryArray.length;
       var cTimer = 2000;
     while( cNb <= cTotal){
       $('#c' + cNb).delay(cTimer).animate({'opacity':'1'},2000);
@@ -30,7 +51,7 @@
           if( bottomOfWindow > bottomOfCountries && countriesShown == false){
             $('.country-text').delay(700).animate({'opacity':'1'},2000);
             var cNb = 1;
-            var cTotal = 12;
+            var cTotal = countryArray.length;
             var cTimer = 2000;
           while( cNb <= cTotal){
             $('#c' + cNb).delay(cTimer).animate({'opacity':'1'},2000);
